@@ -1,25 +1,29 @@
 // Viết 1 function để tạo ra 1 mảng với với số lượng và chuỗi truyền vào. Ví dụ repeatValueArr(3, 'a') trả ra kết quả là mảng như sau: ['a','a','a']
 
-// function repeatValue(count, value) {
-//     // 結果を保存するのため 
-//     var result = [];
-//     // カウントを振替する
-//     for (var i = 0; i < count; i++) 
-//     {    
-//     // Thêm giá trị vào mảng    
-//     result.push(value); 
-//     }
-//     return result;
-// }
+function repeatValue(count, value) {
+    var result = [];
+    for (
+        var i = 0; 
+        i < count; 
+        i++) 
+    {     
+    result.push(value); 
+    }
+    return result;
+}
 
-// console.log(repeatValue(3, 'a')); // ['a','a','a']
+console.log(repeatValue(3, 'a')); 
 
 // Viết 1 function để đảo ngược mảng truyền vào. Ví dụ reverseArr([1,2,3,4,5]) sẽ có kết quả là [5,4,3,2,1]
 
 function reverse(a) {  
     var result1 = [];  
-    for (let i = a.length - 1; i >= 0; i--) 
-    {    result1.push(a[i]);  
+    for (
+        var i = a.length - 1; 
+        i >= 0; 
+        i--) 
+    {    
+        result1.push(a[i]);  
     }  
     return result1;
 }
@@ -29,23 +33,98 @@ console.log(reverse([1,2,3,4,5]));
 
 // Viết 1 function để loại ra các phần tử là Falsy Values trong mảng. Ví dụ removeFalsyArr([0, 1, false, 2, undefined, '', 3, null]) kết quả trả về sẽ là [1,2,3]
 
+function remove(b) {  
+    var result2 = [];  
+    for (
+        var i = 0; 
+        i < b.length; 
+        i++) 
+    {   
+        if (b[i]) 
+        {
+            result2.push([i]);    
+        }  
+    }  
+    return result2;
+}
+
+console.log(remove([0, 1, false, 2, undefined, '', 3, null])); 
+
 
 // Viết 1 function để loại ra các phần tử trùng nhau ở trong mảng. Ví dụ removeDuplicate([1,2,3,1,2,3,4,5]) sẽ có kết quả là [1,2,3,4,5]
+
+function removeDuplicate(c){ 
+    var result3=[];
+    for (
+        var i=0; 
+        i<b.length;
+        i++
+        )
+    {
+        if (result3.indexOf(c[i]) === -1)
+        {
+            result3.push(c[i]);
+        }
+    }
+    return result3;
+
+}
+
+console.log(removeDuplicate([1,2,3,1,2,3,4,5]));
+
 
 
 // Viết 1 function để tạo ra 1 mảng mới chứa nhiều mảng con theo số lượng truyền vào. Ví dụ chunkArr([1, 2, 3, 4, 5], 2) sẽ có kết quả trả về là [[1, 2], [3, 4], [5]]
 
+function codomo(d, e) {  
+    var result4 = [];
+    for (
+        var i = 0; 
+        i < d.length; 
+        i += e
+        ) 
+    {    
+        result4.push(d.slice(i, i + e));  
+    }  
+    return result4;
+}
+var d = [1, 2, 3, 4, 5];
+var e = 2;
+console.log(codomo(d, e));
 
 // Viết 1 function chỉ trả ra các số là số chẵn từ mảng. Ví dụ isEvenArr([13,23,12,45,22,48,66,100]) -> [12,22,48,66,100]
+function even(f) {  
+    var result5 = [];  
+    for (
+        var i = 0; 
+        i < f.length; 
+        i++
+        ) 
+    {    
+        if (f[i] % 2 === 0) 
+            {      
+                result5.push(f[i]);  
+            }  
+    }  
+    return result5;
+}
 
+console.log(even([13,23,12,45,22,48,66,100])); 
 
 // Viết 1 function tìm ra số lớn nhất trong mảng. Ví dụ largestNumber([2, 45, 3, 67, 34, 567, 34, 345, 123]) kết quả là 567
 
+function number(arr) {  
+    return Math.max(...arr);
+}
+console.log(number([2, 45, 3, 67, 34, 567, 34, 345, 123]));
 
 // Viết 1 function có tên là capitalize(str) để biến tất cả chữ thành IN HOA. Ví dụ: capitalize("evondev") có kết quả là EVONDEV
+function word(str) {  
+    return str.toUpperCase();
+}
+console.log(word("evondev"));
 
-
-// Cho 1 mảng đơn giản như sau
+// 9. Cho 1 mảng đơn giản như sau
 // const people = [
 //   { name: "Charlie", age: 28, city: "Chicago" },
 //   { name: "Alice", age: 25, city: "New York" },
