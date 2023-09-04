@@ -58,4 +58,7 @@ function isIncludes(str, word) {
     return str.includes(word);
   }
 console.log(isIncludes("evondev", "von")); // true
-// // console.log(isIncludes("evondev", "vonz")); //flase
+// // console.log(isIncludes("evondev", "vonz")); //false
+
+
+
