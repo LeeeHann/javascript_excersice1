@@ -1,9 +1,9 @@
 // Viết 1 function để tạo ra 1 mảng với với số lượng và chuỗi truyền vào. Ví dụ repeatValueArr(3, 'a') trả ra kết quả là mảng như sau: ['a','a','a']
 
-function repeatValue(count, value) {
-    var result = [];
+function repeatValueArr(count, value) {
+    let result = [];
     for (
-        var i = 0; 
+        let i = 0; 
         i < count; 
         i++) 
     {     
@@ -12,35 +12,35 @@ function repeatValue(count, value) {
     return result;
 }
 
-console.log(repeatValue(3, 'a')); 
+console.log(repeatValueArr(3, 'a')); 
 
 // Viết 1 function để đảo ngược mảng truyền vào. Ví dụ reverseArr([1,2,3,4,5]) sẽ có kết quả là [5,4,3,2,1]
 
-function reverse(a) {  
-    var result1 = [];  
+function reverseArr(arr) {  
+    let result1 = [];  
     for (
-        var i = a.length - 1; 
+        let i = arr.length - 1; 
         i >= 0; 
         i--) 
     {    
-        result1.push(a[i]);  
+        result1.push(arr[i]);  
     }  
     return result1;
 }
 
-console.log(reverse([1,2,3,4,5]));
+console.log(reverseArr([1,2,3,4,5]));
 
 
 // Viết 1 function để loại ra các phần tử là Falsy Values trong mảng. Ví dụ removeFalsyArr([0, 1, false, 2, undefined, '', 3, null]) kết quả trả về sẽ là [1,2,3]
 
-function remove(b) {  
-    var result2 = [];  
+function removeFalsyArr(arr) {  
+    let result2 = [];  
     for (
-        var i = 0; 
-        i < b.length; 
+        let i = 0; 
+        i < arr.length; 
         i++) 
     {   
-        if (b[i]) 
+        if (arr[i]) 
         {
             result2.push([i]);    
         }  
@@ -53,17 +53,17 @@ console.log(remove([0, 1, false, 2, undefined, '', 3, null]));
 
 // Viết 1 function để loại ra các phần tử trùng nhau ở trong mảng. Ví dụ removeDuplicate([1,2,3,1,2,3,4,5]) sẽ có kết quả là [1,2,3,4,5]
 
-function removeDuplicate(c){ 
-    var result3=[];
+function removeDuplicate(arr){ 
+    let result3=[];
     for (
-        var i=0; 
-        i<b.length;
+        let i=0; 
+        i<arr.length;
         i++
         )
     {
-        if (result3.indexOf(c[i]) === -1)
+        if (result3.indexOf(arr[i]) === -1)
         {
-            result3.push(c[i]);
+            result3.push(arr[i]);
         }
     }
     return result3;
@@ -76,53 +76,53 @@ console.log(removeDuplicate([1,2,3,1,2,3,4,5]));
 
 // Viết 1 function để tạo ra 1 mảng mới chứa nhiều mảng con theo số lượng truyền vào. Ví dụ chunkArr([1, 2, 3, 4, 5], 2) sẽ có kết quả trả về là [[1, 2], [3, 4], [5]]
 
-function codomo(d, e) {  
-    var result4 = [];
+function chunkArr(arr, size) {  
+    let result4 = [];
     for (
-        var i = 0; 
-        i < d.length; 
-        i += e
+        let i = 0; 
+        i < arr.length; 
+        i += size
         ) 
     {    
-        result4.push(d.slice(i, i + e));  
+        result4.push(arr.slice(i, i + e));  
     }  
     return result4;
 }
-var d = [1, 2, 3, 4, 5];
-var e = 2;
-console.log(codomo(d, e));
+let arr = [1, 2, 3, 4, 5];
+let size = 2;
+console.log(chunkArr(d, e));
 
 // Viết 1 function chỉ trả ra các số là số chẵn từ mảng. Ví dụ isEvenArr([13,23,12,45,22,48,66,100]) -> [12,22,48,66,100]
-function even(f) {  
-    var result5 = [];  
+function isEvenArr(arr) {  
+    let result5 = [];  
     for (
-        var i = 0; 
-        i < f.length; 
+        let i = 0; 
+        i < arr.length; 
         i++
         ) 
     {    
-        if (f[i] % 2 === 0) 
+        if (arr[i] % 2 === 0) 
             {      
-                result5.push(f[i]);  
+                result5.push(arr[i]);  
             }  
     }  
     return result5;
 }
 
-console.log(even([13,23,12,45,22,48,66,100])); 
+console.log(isEvenArr([13,23,12,45,22,48,66,100])); 
 
 // Viết 1 function tìm ra số lớn nhất trong mảng. Ví dụ largestNumber([2, 45, 3, 67, 34, 567, 34, 345, 123]) kết quả là 567
 
-function number(arr) {  
+function largestNumber(arr) {  
     return Math.max(...arr);
 }
-console.log(number([2, 45, 3, 67, 34, 567, 34, 345, 123]));
+console.log(largestNumber([2, 45, 3, 67, 34, 567, 34, 345, 123]));
 
 // Viết 1 function có tên là capitalize(str) để biến tất cả chữ thành IN HOA. Ví dụ: capitalize("evondev") có kết quả là EVONDEV
-function word(str) {  
+function capitalize(str) {  
     return str.toUpperCase();
 }
-console.log(word("evondev"));
+console.log(capitalize("evondev"));
 
 // 9. Cho 1 mảng đơn giản như sau
 // const people = [
