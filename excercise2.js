@@ -118,25 +118,95 @@ function largestNumber(arr) {
 }
 console.log(largestNumber([2, 45, 3, 67, 34, 567, 34, 345, 123]));
 
-// Viết 1 function có tên là capitalize(str) để biến tất cả chữ thành IN HOA. Ví dụ: capitalize("evondev") có kết quả là EVONDEV
+// // Viết 1 function có tên là capitalize(str) để biến tất cả chữ thành IN HOA. Ví dụ: capitalize("evondev") có kết quả là EVONDEV
 function capitalize(str) {  
     return str.toUpperCase();
 }
 console.log(capitalize("evondev"));
 
-// 9. Cho 1 mảng đơn giản như sau
-// const people = [
-//   { name: "Charlie", age: 28, city: "Chicago" },
-//   { name: "Alice", age: 25, city: "New York" },
-//   { name: "Bob", age: 32, city: "Los Angeles" },
-// ];
+// Cho 1 mảng đơn giản như sau
+const people = [
+  { name: "Charlie", age: 28, city: "Chicago" },
+  { name: "Alice", age: 25, city: "New York" },
+  { name: "Bob", age: 32, city: "Los Angeles" },
+];
 // 9.1 Viết 1 hàm có tên là filterByAge(people, age) để trả về 1 mảng những người có độ tuổi lớn hơn 1 giá trị nhất định
 
+// function filterByAge(people, age) {
+//       return people.filter(person => person.age > age);
+//     }
+// console.log(filterByAge(people, 30));
 
+// 9.2 Viết 1 hàm có tên là sortByNames(people) để sắp xếp tên người theo thứ tự tăng dần 
+function sortByNames(people) {
+    return people.sort((a, b) => {
+??
+ ??     if (a < b) {
+            return -1; 
+        }
+        if (a > b) {
+            return 1;
+        }
+        return 0;
+    });
+}
 
-//  9.2 Viết 1 hàm có tên là sortByNames(people) để sắp xếp tên người theo thứ tự tăng dần 9.3 Viết 1 hàm có tên là findPeopleByCity(people, city) để trả ra đối tượng thuộc thành phố nào đó 9.4 Viết 1 hàm có tên là deletePeopleById(people, id) để xóa 1 người nào đó trong mảng people 9.5 Viết 1 hàm có tên là getAverageAge(people) để tính ra số tuổi trung bình 10(Khó). Viết 1 hàm có tên là countLetters(str) để đếm các kí tự trong chuỗi và trả ra 1 object chứa các từ đó. Ví dụ
+console.log(sortByNames(people));
 
+// 9.3 Viết 1 hàm có tên là findPeopleByCity(people, city) để trả ra đối tượng thuộc thành phố nào đó 
+function findPeopleByCity(people, city) {
+    let result = [];  
+    for (let i = 0; i < people.length; i++) {
+        if (people[i].city === city) {
+            result.push(people[i]);    
+        }  
+    }  
+    return result;
+}
+// 9.4 Viết 1 hàm có tên là deletePeopleById(people, id) để xóa 1 người nào đó trong mảng people
+function deletePeopleById(people, id) {  
+    for (
+        let i = 0; 
+        i < people.length; 
+        i++
+        ) 
+        {
+            if (people[i].id === id) {
+                people.splice(i, 1);
+                return;    
+            }  
+        }
+    }
+    console.log(deletePeopleById(people, 1));
+
+// 9.5 Viết 1 hàm có tên là getAverageAge(people) để tính ra số tuổi trung bình 
+function getAverageAge(people) {
+    let totalAge = 0;  
+    for (
+        let i = 0; 
+        i < people.length; 
+        i++) 
+        {    
+            totalAge += people[i].age; //tính tổng tuổi của mảng
+        }  
+        return totalAge / people.length;
+    }
+
+    console.log(getAverageAge(people));
+
+// 10(Khó). Viết 1 hàm có tên là countLetters(str) để đếm các kí tự trong chuỗi và trả ra 1 object chứa các từ đó. 
+// Ví dụ
 // countLetters('abbcccddddeeeee');
 // {a: 1, b: 2, c: 3, d: 4, e: 5}
 // Gợi ý biến chuỗi thành mảng sử dụng [...str]
-// Gợi ý sử dụng hasOwnProperty trong Object và phương thức reduce trong mảng
+// Gợi ý sử dụng hasOwnProperty trong Object và phương thức reduce trong mảng (đang suy nghĩ)
+function countLetters(str) {  
+    const letters = [...str];
+    const count = {};
+    for (
+        let i = 0; 
+        i < letters.length; 
+        i++
+        )
+        const letter = letters[i];//
+        //?
